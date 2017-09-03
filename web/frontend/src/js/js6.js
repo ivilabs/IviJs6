@@ -96,3 +96,70 @@ console.log(ship.name)
 console.log(ship.mass)
 console.log(ship.loading(20))
 console.log(ship.mass)
+
+/*
+ Js6
+*/
+
+// https://github.com/lukehoban/es6features
+
+// Let and Const
+let i = 0;
+const k = "Hi Js6."
+// Arrow function
+const newArray = array.map((a) => {
+  return `This is a ${a} car.`
+});
+console.log(newArray);
+// Default parameter
+function radius(r, pi = 3.14) {}
+// Destructing object
+const dObject = {
+  fruit: "Apple",
+  animal: "Cat",
+  tool: "Hammer",
+  force: "Gravity"
+}
+const {
+  animal,
+  force
+} = dObject;
+console.log(animal, force);
+// Loop iterators
+for (const a in array) {
+  console.log("In: ", a);
+}
+for (const a of array) {
+  console.log("Of: ", a);
+}
+for (const a of Object.keys(dObject)) {
+  const value = dObject[a];
+  console.log("Object key: ", a, "Object value: ", value);
+}
+// Spread operator
+const sArray = ["Apple", "Cat", "Hammer", "Gravity"];
+const nArray = [...array, ...sArray];
+console.log(nArray);
+// Promise
+const cPromise = fetch("http://time.jsontest.com/");
+cPromise.then(data => data.json()).then(data => {
+  console.log(data)
+}).catch((err) => {
+  console.error(err);
+});
+// Symbols and Proxy and WeakSet (Unnecessary)
+// Generator
+function* gen() {
+  yield "Tom";
+  yield "John";
+  yield "Mary";
+  yield "Donald";
+}
+const g = gen();
+for (const v of g) {
+  console.log(v);
+}
+
+// Map
+
+// Set
