@@ -157,9 +157,27 @@ function* gen() {
 }
 const g = gen();
 for (const v of g) {
-  console.log(v);
+  console.log("Generator: ", v);
 }
 
 // Map
+const animals = new Map();
 
+animals.set("Tiger", 21);
+animals.set("Cat", 3);
+animals.set("Dog", 4);
+animals.set("Spider", 3);
+
+for (const a of animals) {
+  console.log("Map: ", a);
+}
 // Set
+const people = new Set();
+people.add("Tom");
+people.add("John");
+people.add("Mary");
+people.add("Donald");
+
+for (const p of people) {
+  console.log("People: ", p);
+}
